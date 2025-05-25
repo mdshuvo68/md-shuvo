@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Modern QR Code Generator</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+</head>
+<body>
+
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+  </div>
+  <div class="container">
+    <h1>QR CODE GENERATOR</h1>
+
+    <input id="qrName" type="text" placeholder="Enter Name" />
+    <input id="text" type="text" placeholder="https://url" />
+    
+    <div class="colors">
+      <input id="colorDark" type="color" value="#000000" title="QR Code Color" />
+      <input id="colorLight" type="color" value="#ffffff" title="Background Color" />
+    </div>
+
+    <input id="logoFile" type="file" accept="image/*" />
+
+    <button id="generateBtn">Generate QR code</button>
+
+    <div id="output"></div>
+
+    <div id="downloadSection" class="hidden">
+      <a id="downloadLink" href="#" download="qrcode.png" class="download-btn hidden">Downlode</a>
+      <select id="downloadFormat">
+        <option value="png">PNG</option>
+        <option value="jpg">JPG</option>
+        <option value="jpg">SVG</option>
+      </select>
+    </div>
+
+    <button id="toggleHistoryBtn">Show/hide previous data</button>
+
+    <input type="text" id="searchInput" placeholder="Search by QR Name..." class="hidden" />
+
+    <div id="history" class="hidden">
+      <h3>Previous data:</h3>
+      <ul id="historyList"></ul>
+    </div>
+
+    <div id="historyQRCode" class="hidden">
+      <h4>Selected QR:</h4>
+      <div id="historyQROutput"></div>
+      <div>
+        <a id="historyDownloadLink" href="#" download="qrcode.png" class="download-btn hidden">Download</a>
+        <select id="historyDownloadFormat">
+          <option value="png">PNG</option>
+          <option value="jpg">JPG</option>
+          <option value="svg">SVG</option>
+        </select>
+        <button id="deleteHistoryBtn" class="delete-btn">Deleted</button>
+      </div>
+    </div>
+
+    <button id="toggleThemeBtn">
+Toggle the theme</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
