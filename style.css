@@ -27,7 +27,7 @@ body.dark {
 }
 
 .container {
-  background: linear-gradient(35deg,#FFC312, #F79F1F, #EE5A24, #FDA7DF,#1289A7,#12CBC4, #a4b0be,#2f3542);
+  background: linear-gradient(35deg,#a4b0be);
   animation: mymove 3s infinite;
   border: 2px solid #c50e0e;
   padding: 30px;
